@@ -1,7 +1,7 @@
 import os
 import random
 
-folder = "I:\\" # Where the video files to be shuffled and renamed are stored, i used a usb
+folder = "I:\\" # Where the video files to be shuffled and renamed are stored, i used a usb drive, but change accordingly
 files = [f for f in os.listdir(folder) if f.endswith(('.mp4', '.mkv', '.avi'))] # Sorts thru ALL file types to find video files
 numbers_list = [] # List of all possible prefixes
 for i in range(len(files)): 
@@ -9,6 +9,7 @@ for i in range(len(files)):
 
 # print("1", files)
 
+# Prefix remover
 for filename in files: # filters thru all video file names in files list
     for number in numbers_list: # filters thru all prefixes of numbers_list
         if number in filename: # compares one by one the prefixes with the video file names and selects it if there is a match
